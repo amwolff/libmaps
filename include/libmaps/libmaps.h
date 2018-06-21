@@ -1,8 +1,14 @@
-#ifndef _libmaps_H_
-#define _libmaps_H_
+#ifndef LIBMAPS_H
+#define LIBMAPS_H
 
-void bar();
+typedef struct avl *map;
 
-void foo();
+map make_map_int_int();
 
-#endif _libmaps_H_
+int *lookup(map m, int key);
+
+int *insert(map m, int key, int data);
+
+void delete(map m, int key);
+
+#endif LIBMAPS_H
