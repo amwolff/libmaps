@@ -31,7 +31,6 @@ struct avl_node *avl_rotate_left(struct avl_node *n) {
     struct avl_node *x = n->right;
     struct avl_node *st = x->left;
 
-
     x->left = n;
     n->right = st;
 
